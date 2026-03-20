@@ -1,0 +1,15 @@
+name: surgebridge-gateway
+
+services:
+  gateway:
+    container_name: surgebridge-gateway
+    build:
+      context: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: ${PORT:-3000}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"

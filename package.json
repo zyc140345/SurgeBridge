@@ -1,0 +1,18 @@
+{
+  "name": "surgebridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SurgeBridge: generate sing-box and Surge configs from a Clash subscription with Surgio.",
+  "scripts": {
+    "build": "surgio generate",
+    "start": "node gateway.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@surgio/gateway": "^2.3.1",
+    "dotenv": "^17.0.0",
+    "surgio": "^3.0.0"
+  }
+}
