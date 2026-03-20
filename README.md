@@ -16,7 +16,7 @@ The goal is to bridge protocols that Surge cannot consume directly, including VL
 - `gateway.js`: Surgio gateway HTTP server
 - `surgio.conf.js`: artifact definitions and JSON extenders
 - `Dockerfile`: container image for hosted API
-- `compose.yml`: Docker Compose stack for the gateway service
+- `compose.example.yml`: Docker Compose template for the gateway service
 
 ## Setup
 
@@ -77,13 +77,15 @@ http://localhost:3000/get-artifact/sing-box-bridge.json?access_token=YOUR_TOKEN&
 - `SURGIO_ACCESS_TOKEN`
 - `SURGIO_PUBLIC_URL`
 
-2. Build and start:
+2. Copy `compose.example.yml` to `compose.yml` and customize it if needed.
+
+3. Build and start:
 
 ```bash
 docker compose up -d --build
 ```
 
-3. Request the generated artifacts:
+4. Request the generated artifacts:
 
 ```text
 http://localhost:3000/get-artifact/sing-box-bridge.json?access_token=YOUR_TOKEN
